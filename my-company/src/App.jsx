@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes, Link} from 'react-router-dom'
 import './App.css'
 
 import Home from './Home.jsx'
-import Contact from './Contact.jsx'
+import Contact from './components/Contact.jsx'
 import About from './About.jsx'
 import Services from './Services.jsx'
 import Navbar from './components/Navbar.jsx'
