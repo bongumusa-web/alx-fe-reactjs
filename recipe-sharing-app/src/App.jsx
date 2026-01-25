@@ -1,11 +1,23 @@
+import { Routes, Route } from 'react-router-dom';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
-import './App.css';
+import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   return (
     <div>
-      <AddRecipeForm />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <AddRecipeForm />
+              <RecipeList />
+            </>
+          }
+        />
+        <Route path="/recipes/:recipeId" element={<RecipeDetails />} />
+      </Routes>
     </div>
   );
 }
