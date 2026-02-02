@@ -99,19 +99,29 @@ function Search() {
             {error && <p style={{ color: "red" }}>{error}</p>}
 
             {/* Display user data once it has been successfully fetched */}
-           {userData && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                 {userData.map((user) => (
-                  <div key={user.id} className="border p-4 rounded shadow-sm">
-                     <img src={user.avatar_url} alt="avatar"className="w-20 h-20 rounded-full" />
-                     <h2 className="font-semibold mt-2">{user.login}</h2>
-                     <a href={user.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-600">
-                      View Profile
-                     </a>
+            {userData && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    {userData.map((user) => (
+                        <div key={user.id} className="border p-4 rounded shadow-sm">
+                            <img
+                                src={user.avatar_url}
+                                alt="avatar"
+                                className="w-20 h-20 rounded-full"
+                                loading="lazy" // ✅ Lazy loading for optimization
+                            />
+                            <h2 className="font-semibold mt-2">{user.login}</h2>
+                            <a
+                                href={user.html_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600"
+                            >
+                                View Profile
+                            </a>
+                        </div>
+                    ))}
                 </div>
-           ))}
-           </div>
-)}
+            )}
 
         </div>
     );
