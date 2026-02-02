@@ -1,6 +1,6 @@
 GitHub User Search Application
 
-Live Demo
+Live Demo:https://alx-fe-reactjs-xi-seven.vercel.app/
 
 A responsive React application that allows users to search for GitHub profiles with advanced filters such as location and minimum repository count. This project integrates the GitHub Search API and is optimized for real-world deployment using Vercel.
 
