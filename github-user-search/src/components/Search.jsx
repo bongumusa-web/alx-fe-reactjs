@@ -27,7 +27,7 @@ function Search() {
     // Function that runs when the form is submitted
     const handleSubmit = async (event) => {
         event.preventDefault(); // Prevent page reload on form submission
-        //console.log(username);
+        
 
         setLoading(true); // Start loading before making the API request
         setError(""); // Clear any previous error messages
