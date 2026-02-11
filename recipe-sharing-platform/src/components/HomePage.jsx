@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className="min-h-screen bg-slate-200 p-4">
             <h1 className="text-3xl font-bold mb-6 text-center"> Recip Sharing </h1>
 
-            <div className="grid  grid-col-1 sm:grid-cols-2  md:grid-cols-3  gap-4 ">
+            <div className="grid  grid-cols-1 sm:grid-cols-2  md:grid-cols-3  gap-4 ">
                 { recipes.map((recipe) =>  (
                     <div key={recipe.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl">
                         <img src={recipe.image}  alt={recipe.title} className=" w-full  h-[250px] object-cover"/>
