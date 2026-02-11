@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken cooked in a creamy tomato-based gravy.",
+    "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Margherita Pizza",
+    "summary": "A classic pizza topped with tomatoes, mozzarella cheese, and fresh basil.",
+    "image": "https://images.pexels.com/photos/5640020/pexels-photo-5640020.jpeg"
+  },
+  {
+    "id": 4,
+    "title": "Avocado Toast",
+    "summary": "Toasted bread topped with mashed avocado, olive oil, and spices.",
+    "image": "https://images.pexels.com/photos/7937471/pexels-photo-7937471.jpeg"
+  },
+  {
+    "id": 5,
+    "title": "Chocolate Brownies",
+    "summary": "Rich and fudgy chocolate brownies, perfect for dessert lovers.",
+    "image": "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg"
+  },
+  {
+    "id": 6,
+    "title": "Caesar Salad",
+    "summary": "Crisp romaine lettuce tossed with Caesar dressing, croutons, and parmesan.",
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+  }
+]
