@@ -7,37 +7,43 @@ import { useNavigate } from "react-router-dom";
     const [ingredients, setIngredients] = useState("");
     const [steps, setSteps] = useState("");
 
-    const [error,setError] = useState("");
+     const [errors, setErrors] = useState({});
 
 
-    //function to handle uspmite 
-    const handleSubmit = (e) => {
-        e.preventDefault(); 
+    //  Validation function
+  const validate = () => {
+    const newErrors = {};
+    if (!title.trim()) newErrors.title = "Title is required";
+    if (!ingredients.trim()) newErrors.ingredients = "Ingredients are required";
+    if (!steps.trim()) newErrors.steps = "Steps are required";
+    return newErrors;
+  };
 
-        //validation
-        if(!title || !ingredients || !steps){
-            setError("Please fill in all fields!");
-            return;
-        }
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        // recipe object
+    const validationErrors = validate();
+    setErrors(validationErrors);
 
-        const newRecipe = {
-            title,
-            ingredients:ingredients.split("\n"), //spliting the ingrediants
-            steps:steps.split("\n"),
+    // Stop submission if errors exist
+    if (Object.keys(validationErrors).length > 0) return;
 
-        };
-
-        alert('new recipe submited', newRecipe);
-
-        //clear form
-
-        setTitle("");
-        setIngredients("");
-        setSteps("");
-        setError("");
+    // Create recipe object (for now just log)
+    const newRecipe = {
+      title,
+      ingredients: ingredients.split("\n"),
+      steps: steps.split("\n"),
     };
+
+    console.log("New Recipe Submitted:", newRecipe);
+
+    // Clear form
+    setTitle("");
+    setIngredients("");
+    setSteps("");
+    setErrors({});
+  };
+
 
 
 
