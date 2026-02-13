@@ -3,36 +3,119 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg"
+    "image": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Parmesan cheese",
+      "Bacon",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Boil the spaghetti until al dente",
+      "Cook the bacon until crispy",
+      "Whisk eggs and cheese together",
+      "Combine pasta with bacon and egg mixture",
+      "Season with black pepper and serve"
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken cooked in a creamy tomato-based gravy.",
-    "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+    "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
+    "ingredients": [
+      "Chicken",
+      "Yogurt",
+      "Tomatoes",
+      "Cream",
+      "Spices"
+    ],
+    "instructions": [
+      "Marinate the chicken in yogurt and spices",
+      "Grill the chicken until cooked",
+      "Prepare the tomato-based sauce",
+      "Add cream and grilled chicken",
+      "Simmer and serve with rice"
+    ]
   },
   {
     "id": 3,
     "title": "Margherita Pizza",
     "summary": "A classic pizza topped with tomatoes, mozzarella cheese, and fresh basil.",
-    "image": "https://images.pexels.com/photos/5640020/pexels-photo-5640020.jpeg"
+    "image": "https://images.pexels.com/photos/5640020/pexels-photo-5640020.jpeg",
+    "ingredients": [
+      "Pizza dough",
+      "Tomato sauce",
+      "Mozzarella cheese",
+      "Fresh basil",
+      "Olive oil"
+    ],
+    "instructions": [
+      "Preheat the oven",
+      "Spread tomato sauce on the dough",
+      "Add mozzarella cheese",
+      "Bake until crust is golden",
+      "Garnish with fresh basil"
+    ]
   },
   {
     "id": 4,
     "title": "Avocado Toast",
     "summary": "Toasted bread topped with mashed avocado, olive oil, and spices.",
-    "image": "https://images.pexels.com/photos/7937471/pexels-photo-7937471.jpeg"
+    "image": "https://images.pexels.com/photos/7937471/pexels-photo-7937471.jpeg",
+    "ingredients": [
+      "Bread",
+      "Avocado",
+      "Olive oil",
+      "Salt",
+      "Pepper"
+    ],
+    "instructions": [
+      "Toast the bread",
+      "Mash the avocado",
+      "Spread avocado on toast",
+      "Drizzle olive oil",
+      "Season and serve"
+    ]
   },
   {
     "id": 5,
     "title": "Chocolate Brownies",
     "summary": "Rich and fudgy chocolate brownies, perfect for dessert lovers.",
-    "image": "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg"
+    "image": "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg",
+    "ingredients": [
+      "Flour",
+      "Cocoa powder",
+      "Sugar",
+      "Butter",
+      "Eggs"
+    ],
+    "instructions": [
+      "Preheat the oven",
+      "Mix dry ingredients",
+      "Add butter and eggs",
+      "Pour batter into a baking tray",
+      "Bake until set"
+    ]
   },
   {
     "id": 6,
     "title": "Caesar Salad",
     "summary": "Crisp romaine lettuce tossed with Caesar dressing, croutons, and parmesan.",
-    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+    "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+    "ingredients": [
+      "Romaine lettuce",
+      "Croutons",
+      "Parmesan cheese",
+      "Caesar dressing"
+    ],
+    "instructions": [
+      "Wash and chop the lettuce",
+      "Add croutons and cheese",
+      "Pour Caesar dressing",
+      "Toss well",
+      "Serve chilled"
+    ]
   }
 ]

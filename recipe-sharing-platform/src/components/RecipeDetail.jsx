@@ -1,36 +1,73 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import recipesData from "../data.json";
 
 function RecipeDetail() {
-  const { id } = useParams(); // get recipe id from URL
-  const recipe = recipesData.find((r) => r.id === parseInt(id));
+  const { id } = useParams();
+  const [recipe, setRecipe] = useState(null);
+
+  // Load recipe based on URL id
+  useEffect(() => {
+    const foundRecipe = recipesData.find(
+      (r) => r.id === parseInt(id)
+    );
+    setRecipe(foundRecipe);
+  }, [id]);
 
   if (!recipe) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500 text-xl">Recipe not found</p>
-      </div>
-    );
+    return <p className="text-center mt-10">Recipe not found</p>;
   }
 
   return (
-    <div className="min-h-screen bg-slate-200 p-6">
-      <Link to="/" className="text-blue-500 underline mb-4 inline-block">
-        ⬅️ Back to Home
+    /* Whole Page Container */
+    <div className="min-h-screen bg-slate-100 p-4">
+      <Link to="/" className="text-blue-500 mb-4 inline-block">
+        ⬅ Back to Home
       </Link>
 
-      <div className="bg-white rounded-lg shadow-lg max-w-2xl mx-auto overflow-hidden">
-        <img
-          src={recipe.image}
-          alt={recipe.title}
-          className="w-full max-w-[800px] h-[300px] sm:h-[350px] md:h-[450px] object-cover rounded-xl"
+      {/* Center everything */}
+      <div className="max-w-[900px] mx-auto">
 
-        />
-
-        <div className="p-6">
-          <h1 className="text-3xl font-bold mb-4">{recipe.title}</h1>
-          <p className="text-gray-600">{recipe.summary}</p>
+        {/*  Image Card */}
+        <div className="bg-white rounded-xl shadow-md overflow-hidden">
+          <img
+            src={recipe.image}
+            alt={recipe.title}
+            className="w-full h-[320px] md:h-[420px] object-cover"
+          />
         </div>
+
+        {/*  Instructions / Content */}
+        <div className="bg-white rounded-xl shadow-md p-6 mt-6">
+          <h1 className="text-3xl font-bold mb-2">
+            {recipe.title}
+          </h1>
+
+          <p className="text-gray-600 mb-6">
+            {recipe.summary}
+          </p>
+
+          {/* Ingredients */}
+          <h2 className="text-xl font-semibold mb-2">
+            Ingredients
+          </h2>
+          <ul className="list-disc list-inside mb-6">
+            {recipe.ingredients.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+
+          {/* Instructions */}
+          <h2 className="text-xl font-semibold mb-2">
+            Instructions
+          </h2>
+          <ol className="list-decimal list-inside space-y-1">
+            {recipe.instructions.map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
+          </ol>
+        </div>
+
       </div>
     </div>
   );
