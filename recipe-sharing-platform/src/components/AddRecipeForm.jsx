@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [ingredients, setIngredients] = useState("");
-    const [instructions, setInstructions] = useState("");
+    const [steps, setSteps] = useState("");
 
     const [error,setError] = useState("");
 
@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
         e.preventDefault(); 
 
         //validation
-        if(!title || !ingredients || !instructions){
+        if(!title || !ingredients || !steps){
             setError("Please fill in all fields!");
             return;
         }
@@ -25,7 +25,7 @@ import { useNavigate } from "react-router-dom";
         const newRecipe = {
             title,
             ingredients:ingredients.split("\n"), //spliting the ingrediants
-            instructions:instructions.split("\n"),
+            steps:steps.split("\n"),
 
         };
 
@@ -35,7 +35,7 @@ import { useNavigate } from "react-router-dom";
 
         setTitle("");
         setIngredients("");
-        setInstructions("");
+        setSteps("");
         setError("");
     };
 
@@ -76,9 +76,9 @@ import { useNavigate } from "react-router-dom";
 
         {/* Instructions */}
         <div className="mb-4">
-          <label>Instructions (one per line)</label>
+          <label>Steps (one per line)</label>
           <textarea
-            value={instructions}
+            value={steps}
             onChange={(e) => setInstructions(e.target.value)}
             placeholder="List instructions, one per line"
             rows="4"
