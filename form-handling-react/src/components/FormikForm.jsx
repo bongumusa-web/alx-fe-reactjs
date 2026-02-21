@@ -15,20 +15,19 @@ function FormikForm() {
     password: Yup.string().required("Password is required")
   });
 
-  const onSubmit = (values) => {
+  const handleSubmit = (values) => {
     console.log(values);
-    alert("Formik form submitted");
   };
 
   return (
     <div>
 
-      <h2>Formik Registration</h2>
+      <h2>Formik Form</h2>
 
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={onSubmit}
+        onSubmit={handleSubmit}
       >
 
         <Form>

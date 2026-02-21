@@ -5,13 +5,23 @@ function RegistrationForm() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!username || !email || !password) {
-      setError("All fields are required");
+    if (!username) {
+      setErrors("Username is required");
+      return;
+    }
+
+    if (!email) {
+      setErrors("Email is required");
+      return;
+    }
+
+    if (!password) {
+      setErrors("Password is required");
       return;
     }
 
@@ -24,7 +34,7 @@ function RegistrationForm() {
 
       <h2>Registration Form</h2>
 
-      {error && <p style={{color:"red"}}>{error}</p>}
+      {errors && <p style={{ color: "red" }}>{errors}</p>}
 
       <input
         type="text"
