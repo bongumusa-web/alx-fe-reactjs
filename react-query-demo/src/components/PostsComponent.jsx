@@ -7,13 +7,13 @@ function PostsComponent() {
     return response.json();
   };
 
-  const { data, isLoading, error } = useQuery("posts", fetchPosts);
+  const { data, isLoading, isError } = useQuery("posts", fetchPosts);
 
   if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if (error) {
+  if (isError) {
     return <p>Error fetching data</p>;
   }
 
